@@ -1,0 +1,237 @@
+/* Image Input Container */
+.image-input-container {
+  margin-bottom: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.image-input-container .control-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Upload Area */
+.image-upload-area {
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f9fafb;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-upload-area:hover {
+  border-color: #9ca3af;
+  background-color: #f3f4f6;
+}
+
+.image-upload-area:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: #eff6ff;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.image-upload-area.drag-over {
+  border-color: #3b82f6;
+  background-color: #eff6ff;
+  transform: scale(1.02);
+}
+
+.upload-content {
+  pointer-events: none;
+}
+
+.upload-icon::before {
+  content: "📷";
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.upload-text {
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.image-upload-area.drag-over .upload-text {
+  color: #3b82f6;
+}
+
+/* Error Messages */
+.upload-area-error {
+  margin-top: 8px;
+  padding: 8px 12px;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  color: #dc2626;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Thumbnail Container */
+.image-thumbnail-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 12px 0;
+}
+
+/* Individual Thumbnails */
+.image-thumbnail {
+  position: relative;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+  max-width: 200px;
+}
+
+.image-thumbnail:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-thumbnail img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+}
+
+.thumbnail-info {
+  padding: 8px 12px;
+  background-color: white;
+  border-top: 1px solid #f3f4f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.file-name {
+  font-size: 12px;
+  color: #374151;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+  margin-right: 8px;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+
+.remove-btn:hover {
+  color: #dc2626;
+  background-color: #fef2f2;
+}
+
+.remove-btn:focus {
+  outline: none;
+  color: #dc2626;
+  background-color: #fef2f2;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .image-upload-area {
+    padding: 30px 15px;
+    min-height: 100px;
+  }
+  
+  .upload-icon::before {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+  
+  .upload-text {
+    font-size: 13px;
+  }
+  
+  .image-thumbnail {
+    max-width: 150px;
+  }
+  
+  .image-thumbnail img {
+    height: 100px;
+  }
+}
+
+/* Multiple files layout */
+.image-input-container[data-multiple="true"] .image-thumbnail-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.image-input-container[data-multiple="true"] .image-thumbnail {
+  max-width: none;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .image-input-container .control-label {
+    color: #f3f4f6;
+  }
+  
+  .image-upload-area {
+    border-color: #4b5563;
+    background-color: #1f2937;
+  }
+  
+  .image-upload-area:hover {
+    border-color: #6b7280;
+    background-color: #374151;
+  }
+  
+  .upload-text {
+    color: #9ca3af;
+  }
+  
+  .image-thumbnail {
+    border-color: #4b5563;
+    background-color: #1f2937;
+  }
+  
+  .thumbnail-info {
+    background-color: #1f2937;
+    border-top-color: #374151;
+  }
+  
+  .file-name {
+    color: #f3f4f6;
+  }
+  
+  .upload-area-error {
+    background-color: #1f2937;
+    border-color: #dc2626;
+    color: #fca5a5;
+  }
+}
