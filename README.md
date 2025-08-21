@@ -35,3 +35,6 @@ server <- function(input, output, session) {
 
 shinyApp(ui, server)
 ```
+
+![](inst/img/upload-1.png)
+![](inst/img/upload-2.png)
