@@ -1,7 +1,9 @@
 /* Image Input Container */
 .image-input-container {
   margin-bottom: 15px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
 }
 
 .image-input-container .control-label {
@@ -165,20 +167,20 @@
     padding: 30px 15px;
     min-height: 100px;
   }
-  
+
   .upload-icon::before {
     font-size: 2rem;
     margin-bottom: 8px;
   }
-  
+
   .upload-text {
     font-size: 13px;
   }
-  
+
   .image-thumbnail {
     max-width: 150px;
   }
-  
+
   .image-thumbnail img {
     height: 100px;
   }
@@ -197,41 +199,42 @@
 
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
-  .image-input-container .control-label {
+  .image-input-container {
     color: #f3f4f6;
   }
-  
+
   .image-upload-area {
     border-color: #4b5563;
     background-color: #1f2937;
   }
-  
+
   .image-upload-area:hover {
     border-color: #6b7280;
     background-color: #374151;
   }
-  
+
   .upload-text {
     color: #9ca3af;
   }
-  
+
   .image-thumbnail {
     border-color: #4b5563;
     background-color: #1f2937;
   }
-  
+
   .thumbnail-info {
     background-color: #1f2937;
     border-top-color: #374151;
   }
-  
+
   .file-name {
     color: #f3f4f6;
   }
-  
+
   .upload-area-error {
     background-color: #1f2937;
     border-color: #dc2626;
     color: #fca5a5;
   }
 }
+
