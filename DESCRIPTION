@@ -2,7 +2,15 @@ Package: shiny.image
 Title: Image Upload Input for Shiny Applications
 Version: 0.1.0
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
+  c(
+    person(given = "John",
+           family = "Coene",
+           role = c("aut", "cre"),
+           email = "jcoenep@gmail.com"),
+    person(family = "Opifex",
+           role = c("cph", "fnd"),
+           email = "john@opifex.org")
+  )
 Description: Provides a custom Shiny input widget for uploading images with 
     support for drag-and-drop, paste from clipboard, and traditional file 
     selection. Features thumbnail previews and base64 encoding for seamless 

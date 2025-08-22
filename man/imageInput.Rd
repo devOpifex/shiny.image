@@ -30,7 +30,7 @@ Create an image upload input with drag-and-drop, paste, and file selection suppo
 library(shiny)
 
 ui <- fluidPage(
- imageInput("image_upload", "Upload an image", 
+ imageInput("image_upload", "Upload an image",
             placeholder = "Drag & drop, paste, or click to select image")
 )
 
