@@ -6,7 +6,7 @@ An R package that provides a custom Shiny input widget for uploading images with
 
 ```r
 # Install from local source
-devtools::install_local("path/to/shiny.image")
+pak::pak("devOpifex/shiny.image")
 ```
 
 ## Example
